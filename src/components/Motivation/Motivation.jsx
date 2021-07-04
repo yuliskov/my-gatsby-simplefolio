@@ -16,25 +16,28 @@ const Motivation = () => {
           <div className="uneven-section-wrapper">
             <p className="uneven-section-wrapper__text">{cta || 'My motivation!'}</p>
             {url && (
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                className="cta-btn cta-btn--resume"
-                href={url || 'https://github.com/cobidev/react-simplefolio'}
-              >
-                {btn || "Let's Talk"}
-              </a>
+              <p className="uneven-section-wrapper__text">
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="cta-btn cta-btn--resume"
+                  href={url || 'https://github.com/cobidev/react-simplefolio'}
+                >
+                  {btn || "Let's Talk"}
+                </a>
+              </p>
             )}
-            {'  '}
             {url2 && (
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                className="cta-btn cta-btn--resume"
-                href={url2 || 'https://github.com/cobidev/react-simplefolio'}
-              >
-                {btn2 || "Let's Talk"}
-              </a>
+              <p className="uneven-section-wrapper__text">
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="cta-btn cta-btn--resume"
+                  href={url2 || 'https://github.com/cobidev/react-simplefolio'}
+                >
+                  {btn2 || "Let's Talk"}
+                </a>
+              </p>
             )}
           </div>
         </Fade>

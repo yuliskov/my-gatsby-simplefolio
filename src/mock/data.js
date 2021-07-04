@@ -9,7 +9,7 @@ export const headData = {
 
 // HERO DATA
 export const heroData = {
-  title: 'Привіт, мене звуть',
+  title: 'Привіт, мене звати',
   name: 'Юрій Лиськов',
   subtitle:
     'Я навчаюсь на третьому курсі НТУ ДП по спеціальності Інженерія програмного забезпечення.',
@@ -20,7 +20,7 @@ export const heroData = {
 export const aboutData = {
   title: 'Про мене',
   img: 'my_profile.jpg',
-  paragraphOne: 'Мене звують Юрій Лиськов. Я із Дніпра.',
+  paragraphOne: 'Мене звати Юрій Лиськов. Я із Дніпра.',
   paragraphTwo:
     'Зараз я навчаюсь на третьому курсі НТУ ДП по спеціальності Інженерія програмного забезпечення.',
   paragraphThree:
@@ -104,7 +104,7 @@ export const copyrightInfo = {
 };
 
 export const disclaimerData = {
-  title: 'Відмова від відповідальності',
+  title: 'Згода на використання персональних даних',
   cta: 'Даю згоду на використання наведених матеріалів у цілях профорієнтаційної діяльності і обробку та поширення особистих даних.',
   btn: '',
   url: '',
