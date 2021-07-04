@@ -1,4 +1,4 @@
-#contact {
+.even-section {
   background-image: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
   -webkit-clip-path: polygon(0 15vh, 100% 0, 100% 100%, 0 100%);
   clip-path: polygon(0 15vh, 100% 0, 100% 100%, 0 100%);
@@ -14,7 +14,7 @@
     -webkit-clip-path: none;
   }
 
-  .contact-wrapper {
+  &-wrapper {
     margin-top: 3.2rem;
     padding: 0 2rem;
     backface-visibility: hidden;

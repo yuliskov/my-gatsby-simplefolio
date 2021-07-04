@@ -1,0 +1,74 @@
+.uneven-section {
+  background: $white-color;
+  -webkit-clip-path: polygon(0 15vh, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 15vh, 100% 0, 100% 100%, 0 100%);
+  padding: 15rem 0 10rem 0;
+  margin-top: -15rem;
+  margin-bottom: -1px;
+  color: $dark-blue-text;
+
+  @include respond(tab-land) {
+    padding: 10rem 0;
+    clip-path: none;
+    margin-top: 0;
+    -webkit-clip-path: none;
+  }
+
+  &-wrapper {
+    margin-top: 3.2rem;
+    padding: 0 2rem;
+    backface-visibility: hidden;
+
+    &__text {
+      margin-bottom: 2.5rem;
+    }
+
+    &__text,
+    a {
+      font-size: 2.4rem;
+
+      // Responsive for contact text
+      @include respond(phone) {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  .cta-btn--resume {
+    background-image: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-width: 2px;
+    border-style: solid;
+    border-image: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
+    border-image-slice: 1;
+    cursor: pointer;
+    // Responsive Button hero style
+    @include respond(phone) {
+      background-image: none;
+      border: 2px solid $secondary-color;
+      -webkit-text-fill-color: $secondary-color;
+    }
+
+    &::after {
+      background-image: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
+      // Responsive Button hero style
+      @include respond(phone) {
+        background-image: none;
+      }
+    }
+
+    &:hover {
+      -webkit-text-fill-color: $white-color;
+      text-decoration: none;
+      // Responsive Button hover hero style
+      @include respond(phone) {
+        -webkit-text-fill-color: $secondary-color;
+      }
+
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -4,12 +4,13 @@ import { Link } from 'react-scroll';
 import PortfolioContext from '../../context/context';
 import GithubButtons from '../GithubButtons/GithubButtons';
 
-import { githubButtons } from '../../mock/data';
+import { copyrightInfo, githubButtons } from '../../mock/data';
 
 const Footer = () => {
   const { footer } = useContext(PortfolioContext);
   const { networks } = footer;
-  const { isEnabled } = githubButtons;
+  const { isEnabled: isButtonsEnabled } = githubButtons;
+  const { isEnabled: isCopyrightEnabled } = copyrightInfo;
 
   return (
     <footer className="footer navbar-static-bottom">
@@ -37,14 +38,19 @@ const Footer = () => {
             })}
         </div>
         <hr />
-        <p className="footer__text">
-          © {new Date().getFullYear()} - Template developed by{' '}
-          <a href="https://github.com/cobidev" target="_blank" rel="noopener noreferrer">
-            Jacobo Martínez
-          </a>
-        </p>
 
-        {isEnabled && <GithubButtons />}
+        {isCopyrightEnabled ? (
+          <p className="footer__text">
+            © {new Date().getFullYear()} - Template developed by{' '}
+            <a href="https://github.com/cobidev" target="_blank" rel="noopener noreferrer">
+              Jacobo Martínez
+            </a>
+          </p>
+        ) : (
+          <div className="footer__text">© {new Date().getFullYear()}</div>
+        )}
+
+        {isButtonsEnabled && <GithubButtons />}
       </Container>
     </footer>
   );

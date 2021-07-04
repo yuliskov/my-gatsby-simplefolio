@@ -6,13 +6,15 @@
 @import './base/typography';
 
 @import './components/buttons';
+@import './components/video';
 
 @import './layout/footer';
 @import './layout/sections';
 
 @import './sections/about';
-@import './sections/contact';
 @import './sections/hero';
 @import './sections/projects';
+@import './sections/even_section';
+@import './sections/uneven_section';
 
 @import './vendor/css/font-awesome.min.css';
